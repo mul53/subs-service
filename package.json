@@ -1,0 +1,25 @@
+{
+  "name": "fuse-sub-impl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-subscriber": "node ./subscriber-server/index.js",
+    "start-subscription-provider": "node ./subscription-server/index.js",
+    "start": "concurrently --kill-others \"npm run start-subscriber\" \"npm run start-subscription-provider\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ethers": "^5.0.31",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
